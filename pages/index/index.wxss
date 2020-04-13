@@ -1,0 +1,213 @@
+/* pages/index/index.wxss */
+page {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgb(11, 11, 236, 0.7), rgb(11, 11, 236, 0.1));
+}
+
+.body{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  position: absolute;
+  left: 52rpx;
+  top: 50rpx;
+}
+
+.wrapper>text {
+  font-size: 60rpx;
+  color: #fff;
+  font-weight: bolder;
+  font-family: Impact, Charcoal, sans-serif;
+  font-style: italic;
+}
+
+.top {
+  width: 646rpx;
+  margin-left: 52rpx;
+  margin-top: 180rpx;
+}
+
+.btns {
+  /* 转弹性布局 */
+  display: flex;
+  /* 主轴居中 */
+  justify-content: center;
+  /* 交叉轴居中 */
+  align-items: center;
+}
+
+.btn {
+  width: 308rpx;
+  height: 43rpx;
+  font-size: 24rpx;
+  text-align: center;
+  line-height: 43rpx;
+  background-color: #ddd;
+}
+
+.active {
+  background-color: #fff;
+}
+
+.container {
+  width: 646rpx;
+  height: 300rpx;
+  background-color: #ffffff;
+  /* 块元素进行居中 */
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container>view {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container>view>text:first-child {
+  font-size: 46rpx;
+}
+
+/* :nth-child(2)选中第二个 */
+.container>view>text:nth-child(2) {
+  font-size: 26rpx;
+}
+
+/* :last-child最后的 */
+.container>view>text:last-child {
+  font-size: 20rpx;
+}
+
+.container2 {
+  width: 646rpx;
+  height: 300rpx;
+  background-color: #ffffff;
+  /* 块元素进行居中 */
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container2>view {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container2>view>text:first-child {
+  font-size: 38rpx;
+}
+
+/* :nth-child(2)选中第二个 */
+.container2>view>text:nth-child(2) {
+  font-size: 24rpx;
+}
+
+/* :last-child最后的 */
+.container2>view>text:last-child {
+  font-size: 20rpx;
+}
+
+
+.banner {
+  width: 646rpx;
+  height: 150rpx;
+  background-color: #fffdea;
+  margin: 0 auto;
+  display: flex;
+}
+
+.news {
+  width: 150rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 32rpx;
+  color: #f56308;
+  font: bold;
+}
+
+swiper {
+  width: 466rpx;
+  height: 150rpx;
+  background-color: #fffdea;
+}
+
+swiper-item {
+  display: flex;
+  flex-direction: column;
+  font-size: 28rpx;
+  justify-content: space-between;
+}
+
+.summary {
+  /* 多行文本溢出隐藏 */
+  /* 文本两端对齐 */
+  text-align: justify;
+  padding-top: 30rpx;
+  display: -webkit-box;
+  /* 文字垂直排列 */
+  -webkit-box-orient: vertical;
+  /* 显示几行文本 */
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.pubdata {
+  font-size: 24rpx;
+}
+
+.confirmed {
+  color: red;
+}
+
+.suspected {
+  color: rgb(255, 208, 0);
+}
+
+.dead {
+  color: #ddd;
+}
+
+.cured {
+  color: green;
+}
+
+.bottom {
+  border: 1rpx solid #fff;
+  background-color: #fff;
+  border-radius: 20rpx;
+  margin: 20rpx 52rpx 0 52rpx;
+}
+
+.title-know {
+  padding-left: 10rpx;
+}
+
+.hor {
+  width: 100%;
+  height: 2rpx;
+  background-color: #d5d5d5;
+  margin-top: 5rpx;
+  margin-bottom: 5rpx;
+}
+
+.know-content {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10rpx;
+}
+
+.text-detail{
+  font-size: 26rpx;
+  text-align: justify;
+}

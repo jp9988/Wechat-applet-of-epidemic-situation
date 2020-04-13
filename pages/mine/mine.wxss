@@ -1,0 +1,120 @@
+.header {
+  height: 240rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: skyblue;
+}
+
+.hor {
+  width: 100%;
+  height: 2rpx;
+  background-color: #d5d5d5;
+}
+
+.header>text:first-child {
+  width: 280rpx;
+  height: 50rpx;
+  border-radius: 30rpx;
+  border: 1px solid #999;
+  text-align: center;
+  line-height: 50rpx;
+  font-size: 30rpx;
+}
+
+.header>text:last-child {
+  font-size: 60rpx;
+  font-weight: bolder;
+  letter-spacing: 12rpx;
+}
+
+.container {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: #f1f1f1;
+}
+
+/* 伪类 */
+/* content可以为空，但必须要有 */
+.box::before {
+  transform: rotate(-45deg);
+  content: "";
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border: 70rpx solid #f6af32;
+  left: -70rpx;
+  top: -70rpx;
+  /* background-color: #f6af32; */
+  position: absolute;
+}
+
+.box {
+  width: 100%;
+  height: 500rpx;
+  background-color: #066;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20rpx;
+}
+
+.num {
+  color: white;
+  position: absolute;
+  left: 20rpx;
+  top: 7rpx;
+  font-size: 34rpx;
+}
+
+.title {
+  font-size: 50rpx;
+  color: #fff;
+  padding: 20rpx 20rpx 0 20rpx;
+  box-sizing: border-box;
+  margin-top: 70rpx;
+}
+
+.content {
+  height: 300rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+  background-color: white;
+  width: 100%;
+  margin-top: 60rpx;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+}
+
+.author-date {
+  font-size: 24rpx;
+  position: absolute;
+  position: absolute;
+  bottom: 20rpx;
+  text-align: justify;
+  padding-left: 5rpx;
+  padding-right: 20rpx;
+}
+
+.explain {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 160rpx;
+  height: 160rpx;
+  border: 8rpx dashed #ff6030;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(20deg);
+  color: #ff6030;
+  font-weight: bolder;
+}

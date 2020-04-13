@@ -1,0 +1,35 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/mine/mine"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#75a4e6",
+    "navigationBarTitleText": "抗击疫情",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#fff",
+    "enablePullDownRefresh": true,
+    "onReachBottomDistance":30
+  },
+  "tabBar": {
+    "selectedColor": "#75a4e6",
+    "color": "#aaa",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "抗击疫情",
+        "selectedIconPath": "icons/acncov.png",
+        "iconPath": "icons/ncov.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "粉碎谣言",
+        "selectedIconPath": "icons/acrumour.png",
+        "iconPath": "icons/rumour.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

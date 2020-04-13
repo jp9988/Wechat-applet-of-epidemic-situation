@@ -1,0 +1,109 @@
+<view class="body">
+	<view class="wrapper">
+		<text>抗击新冠肺炎</text>
+	</view>
+	<view class="top">
+		<view class="btns">
+			<view class="btn {{current == 0 ? 'active' : ''}}" catchtap="onClick" data-id="0">国内疫情</view>
+			<view class="btn {{current == 1 ? 'active' : ''}}" catchtap="onClick" data-id="1">国外疫情</view>
+			<view class="btn {{current == 2 ? 'active' : ''}}" catchtap="onClick" data-id="2">全球疫情</view>
+		</view>
+		<!-- 引用模板 -->
+		<template is="msg1" data="{{...ncov.desc}}" wx:if="{{current == 0}}" />
+		<template is="msg2" data="{{...ncov.desc.foreignStatistics}}" wx:if="{{current == 1}}"></template>
+		<template is="msg2" data="{{...ncov.desc.globalStatistics}}" wx:if="{{current == 2}}"></template>
+		<!-- 轮播图 -->
+		<view class="banner">
+			<view class="news">
+				<text>实时</text>
+				<text>资讯</text>
+			</view>
+			<!-- 轮播图 -->
+			<swiper autoplay="true" interval="2000" circular="true" vertical="true">
+				<swiper-item wx:for="{{ncov.news}}">
+					<text class="summary">{{item.title}}</text>
+					<text class="pubdate">{{item.infoSource}} {{item.pubDateStr}}</text>
+				</swiper-item>
+			</swiper>
+		</view>
+	</view>
+
+	<view class="bottom">
+		<text class="title-know">科普知识</text>
+		<view class="hor"></view>
+		<view class="know-content">
+			<text class="text-detail">{{ncov.desc.note1}}</text>
+			<text class="text-detail">{{ncov.desc.note2}}</text>
+			<text class="text-detail">{{ncov.desc.note3}}</text>
+			<text class="text-detail">{{ncov.desc.remark1}}</text>
+			<text class="text-detail">{{ncov.desc.remark2}}</text>
+			<text class="text-detail">{{ncov.desc.remark3}}</text>
+		</view>
+	</view>
+</view>
+
+<!-- 全国的疫情数据 -->
+<template name="msg1">
+	<view class="container">
+		<!-- 累计的确诊人数 -->
+		<view class="confirmed">
+			<text>{{confirmedCount}}</text>
+			<text>确诊</text>
+			<text>较昨日+{{confirmedIncr}}</text>
+		</view>
+		<!-- 累计的疑似人数 -->
+		<view class="suspected">
+			<text>{{suspectedCount}}</text>
+			<text>疑似</text>
+			<text>较昨日+{{suspectedIncr}}</text>
+		</view>
+
+		<!-- 累计的死亡人数 -->
+		<view class="dead">
+			<text>{{deadCount}}</text>
+			<text>死亡</text>
+			<text>较昨日+{{deadIncr}}</text>
+		</view>
+
+		<!-- 累计的治愈人数 -->
+		<view class="cured">
+			<text>{{curedCount}}</text>
+			<text>治愈</text>
+			<text>较昨日+{{curedIncr}}</text>
+		</view>
+	</view>
+</template>
+
+
+<!-- 国外和全球的疫情数据 -->
+<template name="msg2">
+	<view class="container2">
+		<!-- 累计的确诊人数 -->
+		<view class="confirmed">
+			<text>{{confirmedCount}}</text>
+			<text>确诊</text>
+			<text>较昨日+{{confirmedIncr}}</text>
+		</view>
+
+		<!-- 现存确诊人数 -->
+		<view class="suspected">
+			<text>{{currentConfirmedCount}}</text>
+			<text>现有确诊</text>
+			<text>较昨日+{{currentConfirmedIncr}}</text>
+		</view>
+
+		<!-- 累计的死亡人数 -->
+		<view class="dead">
+			<text>{{deadCount}}</text>
+			<text>死亡</text>
+			<text>较昨日+{{deadIncr}}</text>
+		</view>
+
+		<!-- 累计的治愈人数 -->
+		<view class="cured">
+			<text>{{curedCount}}</text>
+			<text>治愈</text>
+			<text>较昨日+{{curedIncr}}</text>
+		</view>
+	</view>
+</template>

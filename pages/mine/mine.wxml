@@ -1,0 +1,16 @@
+<view class="header">
+  <text>新型冠状病毒肺炎</text>
+  <text>谣言排行榜</text>
+</view> 
+<view class="hor"></view>
+<view class="container">
+  <view class="box" wx:for="{{arr}}">
+    <text class="num">{{index+1}}</text>
+    <text class="title">{{item.title}}</text>
+    <view class="content">
+      <text class="detail">{{item.desc}}</text>
+      <text class="author-date">{{item.author}} {{item.date}}</text>
+    </view>
+    <text class="explain" style="font-size:{{item.explain.length == 2 ? '50rpx':item.explain.length == 3 ? '40rpx' : '32rpx'}};letter-spacing:{{item.explain.length == 2 ? '6rpx':'0rpx'}};color:{{item.markstyle == 'true' ? '#26b99f':item.markstyle == 'doubt' ? '#999':'#F52B2B'}};border-color:{{item.markstyle == 'true' ? '#26b99f':item.markstyle == 'doubt' ? '#999':'#F52B2B'}}">{{item.explain}}</text>
+  </view>
+</view>
